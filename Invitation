@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f8f4f0, #fff);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Intro Screen */
+#intro {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeOut 1s ease 4s forwards;
+}
+
+#intro h1 {
+  font-size: 28px;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+#intro p {
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards;
+}
+
+/* Main */
+#main {
+  opacity: 0;
+  padding: 40px;
+  animation: showMain 2s 5s forwards;
+}
+
+h1 {
+  font-size: 40px;
+  color: #333;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  animation: slideUp 1.5s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes showMain {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0;}
+  to { transform: translateY(0); opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Intro Animation -->
+<div id="intro">
+  <h1>Bismillahir Rahmanir Raheem</h1>
+  <p>With the blessings of Allah</p>
+</div>
+
+<!-- Main Content -->
+<div id="main">
+  <h1>You're Invited</h1>
+
+  <div class="card">
+    <p>With hearts full of gratitude to Allah,</p>
+    <p>we invite you to our wedding.</p>
+
+    <h2>YOUR NAME & YOUR WIFE NAME</h2>
+
+    <p><strong>Date:</strong> May 31</p>
+
+    <p><strong>Venue:</strong><br>
+    Crown Plaza Convention Center,<br>
+    Kolathur, Malappuram, Kerala, India</p>
+
+    <p>Your presence and duas will mean a lot to us.</p>
+  </div>
+</div>
+
+</body>
+</html>
